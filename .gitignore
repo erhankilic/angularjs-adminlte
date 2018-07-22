@@ -1,0 +1,7 @@
+node_modules/
+bower_components/
+.idea/
+.tmp/
+dist/
+npm-debug.log
+package-lock.json

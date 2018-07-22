@@ -1,0 +1,30 @@
+{
+  "name": "angularjs-adminlte",
+  "homepage": "https://github.com/erhankilic/angularjs-adminlte",
+  "description": "Adminlte theme with AngularJs",
+  "main": "",
+  "keywords": [
+    "adminlte",
+    "angularjs",
+    "admin",
+    "theme",
+    "dashboard"
+  ],
+  "authors": [
+    "Erhan Kılıç"
+  ],
+  "license": "MPL-2.0",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "jquery": ">=1.7.1 <4.0.0"
+  },
+  "dependencies": {
+    "angular": "#^1.7.2",
+    "admin-lte": "^2.4.8"
+  }
+}
