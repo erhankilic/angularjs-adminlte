@@ -1,10 +1,8 @@
 (function () {
     'use strict';
 
-    angular.module('adminlte', []);
+    angular.module('adminlte', [
+        "ui.router"
+    ]);
 
 })();
-
-
-
-

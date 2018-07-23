@@ -186,10 +186,8 @@ gulp.task('bower', function () {
 gulp.task('js', function () {
     return gulp.src([
         conf.jsSrcDir + '/app.js',
-        conf.jsSrcDir + '/app.run.js',
-        conf.jsSrcDir + '/app.controller.js',
-        conf.jsSrcDir + '/app.config.js',
-        //conf.jsSrcDir + '**/*.js',
+        conf.jsSrcDir + '/core/**/*.js',
+        conf.jsSrcDir + '/pages/**/*.js',
         conf.jsSrcDir + '**/*.html'
     ])
         .pipe(gulpIf('*.html', htmlmin({
