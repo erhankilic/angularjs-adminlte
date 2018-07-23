@@ -7,6 +7,12 @@
         "$locationProvider"
     ];
 
+    /**
+     * Config
+     *
+     * @param $locationProvider
+     * @constructor
+     */
     function ConfigFn($locationProvider) {
         $locationProvider.html5Mode(true);
     }

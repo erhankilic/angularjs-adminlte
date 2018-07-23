@@ -188,6 +188,7 @@ gulp.task('js', function () {
         conf.jsSrcDir + '/app.js',
         conf.jsSrcDir + '/core/**/*.js',
         conf.jsSrcDir + '/pages/**/*.js',
+        conf.jsSrcDir + '/modules/**/*.js',
         conf.jsSrcDir + '**/*.html'
     ])
         .pipe(gulpIf('*.html', htmlmin({
