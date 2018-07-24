@@ -272,7 +272,7 @@ gulp.task('browserSync', function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src(conf.imagesSrcDir + '/**/*.+(png|jpg|jpeg|gif|svg|ico)')
+    return gulp.src(conf.imagesSrcDir + '**/*.+(png|jpg|jpeg|gif|svg|ico)')
     // Caching images
         .pipe(cache(imagemin({
             interlaced: true
