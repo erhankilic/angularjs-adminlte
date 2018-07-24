@@ -145,6 +145,14 @@ var bowerConf = {
                 "**/fontawesome-webfont.ttf",
                 "**/fontawesome-webfont.svg"
             ]
+        },
+        "Flot": {
+            "main": [
+                "**/jquery.flot.js",
+                "**/jquery.flot.resize.js",
+                "**/jquery.flot.pie.js",
+                "**/jquery.flot.categories.js"
+            ]
         }
     }
 };
