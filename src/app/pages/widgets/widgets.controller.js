@@ -16,7 +16,7 @@
      */
     function configFn($stateProvider) {
         $stateProvider.state('widgets', {
-            url: '/',
+            url: '/widgets',
             templateUrl: 'app/pages/widgets/widgets.html',
             controller: ControllerFn,
             controllerAs: 'vmWidgets'
