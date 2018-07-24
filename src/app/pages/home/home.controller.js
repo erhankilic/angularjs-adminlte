@@ -18,8 +18,8 @@
         $stateProvider.state('home', {
             url: '/',
             templateUrl: 'app/pages/home/home.html',
-            controller: HomeController,
-            controllerAs: 'vmHomeController'
+            controller: ControllerFn,
+            controllerAs: 'vmHome'
         });
     }
 
@@ -28,7 +28,7 @@
      *
      * @constructor
      */
-    function HomeController() {
+    function ControllerFn() {
         var vm = this;
 
         $(document).ready(function () {

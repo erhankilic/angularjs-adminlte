@@ -188,7 +188,6 @@ gulp.task('bower', function () {
 
 //JS operations
 gulp.task('js', function () {
-    console.log(bowerMain(bowerConf));
     return gulp.src([
         conf.jsSrcDir + '/app.js',
         conf.jsSrcDir + '/core/**/*.js',
