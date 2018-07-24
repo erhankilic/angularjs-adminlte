@@ -81,10 +81,17 @@ var bowerConf = {
             "main": [
                 "**/AdminLTE.css",
                 "**/adminlte.js",
-                "**/_all-skins.min.css"
+                "**/_all-skins.min.css",
+                "**/jquery-jvectormap-1.2.2.min.js",
+                "**/jquery-jvectormap-world-mill-en.js",
+                "**/bootstrap3-wysihtml5.all.min.js",
+                "**/bootstrap3-wysihtml5.min.css"
             ],
             "dependencies": {
                 "jquery": "^3.2.1",
+                "jquery-ui": "1.11.4",
+                "jquery-slimscroll": "slimscroll#^1.3.8",
+                "jquery-sparkline": "^2.1.3",
                 "bootstrap": "^3.3.7",
                 "font-awesome": "^4.7.0",
                 "moment": "^2.18.1",
@@ -101,9 +108,6 @@ var bowerConf = {
                 "morris.js": "^0.5.1",
                 "PACE": "pace#^1.0.2",
                 "select2": "^4.0.3",
-                "jquery-slimscroll": "slimscroll#^1.3.8",
-                "jquery-sparkline": "^2.1.3",
-                "jquery-ui": "1.11.4",
                 "Ionicons": "ionicons#^2.0.1",
                 "inputmask": "jquery.inputmask#^3.3.7",
                 "bootstrap-colorpicker": "^2.5.1",
@@ -184,6 +188,7 @@ gulp.task('bower', function () {
 
 //JS operations
 gulp.task('js', function () {
+    console.log(bowerMain(bowerConf));
     return gulp.src([
         conf.jsSrcDir + '/app.js',
         conf.jsSrcDir + '/core/**/*.js',
