@@ -15,11 +15,11 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('elementsGeneral', {
-            url: '/ui-elements/general',
-            templateUrl: 'app/pages/ui-elements/general/general.html',
+        $stateProvider.state('elementsButtons', {
+            url: '/ui-elements/buttons',
+            templateUrl: 'app/pages/ui-elements/buttons/buttons.html',
             controller: ControllerFn,
-            controllerAs: 'vmGeneral'
+            controllerAs: 'vmButtons'
         });
     }
 
