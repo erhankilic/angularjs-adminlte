@@ -85,7 +85,8 @@ var bowerConf = {
                 "**/jquery-jvectormap-1.2.2.min.js",
                 "**/jquery-jvectormap-world-mill-en.js",
                 "**/bootstrap3-wysihtml5.all.min.js",
-                "**/bootstrap3-wysihtml5.min.css"
+                "**/bootstrap3-wysihtml5.min.css",
+                "**/slider.css"
             ],
             "dependencies": {
                 "jquery": "^3.2.1",
