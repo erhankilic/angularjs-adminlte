@@ -86,7 +86,15 @@ var bowerConf = {
                 "**/jquery-jvectormap-world-mill-en.js",
                 "**/bootstrap3-wysihtml5.all.min.js",
                 "**/bootstrap3-wysihtml5.min.css",
-                "**/slider.css"
+                "**/slider.css",
+                "**/bootstrap-timepicker.min.css",
+                "**/iCheck/**/_all.css",
+                "**/iCheck/**/futurico.css",
+                "**/iCheck/**/polaris.css",
+                "**/icheck.min.js",
+                "**/jquery.inputmask.js",
+                "**/jquery.inputmask.date.extensions.js",
+                "**/jquery.inputmask.extensions.js"
             ],
             "dependencies": {
                 "jquery": "^3.2.1",
@@ -131,11 +139,7 @@ var bowerConf = {
             "main": "**/jquery.slimscroll.min.js"
         },
         "inputmask": {
-            "main": [
-                "**/inputmask.min.js",
-                "**/inputmask.date.extensions.min.js",
-                "**/inputmask.extensions.min.js"
-            ]
+            "ignore": true
         },
         "font-awesome": {
             "main": [
@@ -153,6 +157,18 @@ var bowerConf = {
                 "**/jquery.flot.resize.js",
                 "**/jquery.flot.pie.js",
                 "**/jquery.flot.categories.js"
+            ]
+        },
+        "select2": {
+            "main": [
+                "**/select2.min.css",
+                "**/select2.full.min.js"
+            ]
+        },
+        "bootstrap-colorpicker": {
+            "main": [
+                "**/bootstrap-colorpicker.min.css",
+                "**/bootstrap-colorpicker.min.js"
             ]
         }
     }
@@ -228,6 +244,7 @@ gulp.task('sass', function () {
             conf.srcDir + "index.scss",
             conf.appStylesDir + '**/**/*.scss'
         ])
+        .pipe(concat("app.css"))
         .pipe(sass().on('error', sass.logError)) // log errors to console
         .pipe(gulpIf(minify === 'yes', cssnano()))	//Minify
         .pipe(rename('app.min.css'))

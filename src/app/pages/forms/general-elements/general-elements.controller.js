@@ -16,7 +16,7 @@
      */
     function configFn($stateProvider) {
         $stateProvider.state('formsGeneralElements', {
-            url: '/',
+            url: '/forms/general-elements',
             templateUrl: 'app/pages/forms/general-elements/general-elements.html',
             controller: ControllerFn,
             controllerAs: 'vmGeneralElements'
@@ -30,8 +30,5 @@
      */
     function ControllerFn() {
         var vm = this;
-
-        $(document).ready(function () {
-        });
     }
 })();
