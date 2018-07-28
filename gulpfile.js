@@ -69,7 +69,7 @@ var conf = {
     cssDestDir: 'dist/css/',
     imagesDestDir: 'dist/images/',
     imagesSrcDir: 'src/images/',
-    fontsSrcDir: ['src/fonts/*', 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*'],
+    fontsSrcDir: ['src/fonts/*', 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*', 'bower_components/bootstrap/dist/fonts/*'],
     fontsDestDir: 'dist/fonts/',
     jsSrcDir: 'src/app/',
     jsDestDir: 'dist/scripts/'
@@ -105,7 +105,6 @@ var bowerConf = {
                 "font-awesome": "^4.7.0",
                 "moment": "^2.18.1",
                 "chart.js": "1.0.*",
-                "ckeditor": "^4.7.0",
                 "datatables.net": "^1.10.15",
                 "datatables.net-bs": "^2.1.1",
                 "fastclick": "^1.0.6",
@@ -170,6 +169,9 @@ var bowerConf = {
                 "**/bootstrap-colorpicker.min.css",
                 "**/bootstrap-colorpicker.min.js"
             ]
+        },
+        "ckeditor": {
+            "ignore": true
         }
     }
 };
