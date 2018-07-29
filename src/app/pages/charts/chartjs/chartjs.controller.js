@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('chartjs', {
+        $stateProvider.state('app.chartjs', {
             url: '/charts/chartjs',
-            templateUrl: 'app/pages/charts/chartjs/chartjs.html',
-            controller: ControllerFn,
-            controllerAs: 'vmChartjs'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/charts/chartjs/chartjs.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmChartjs'
+                }
+            }
         });
     }
 

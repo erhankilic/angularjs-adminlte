@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('elementsSliders', {
+        $stateProvider.state('app.elementsSliders', {
             url: '/ui-elements/sliders',
-            templateUrl: 'app/pages/ui-elements/sliders/sliders.html',
-            controller: ControllerFn,
-            controllerAs: 'vmSliders'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/ui-elements/sliders/sliders.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmSliders'
+                }
+            }
         });
     }
 

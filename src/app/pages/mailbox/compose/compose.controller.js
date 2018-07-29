@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('mailboxCompose', {
+        $stateProvider.state('app.mailboxCompose', {
             url: '/mailbox/compose',
-            templateUrl: 'app/pages/mailbox/compose/compose.html',
-            controller: ControllerFn,
-            controllerAs: 'vmCompose'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/mailbox/compose/compose.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmCompose'
+                }
+            }
         });
     }
 

@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('widgets', {
+        $stateProvider.state('app.widgets', {
             url: '/widgets',
-            templateUrl: 'app/pages/widgets/widgets.html',
-            controller: ControllerFn,
-            controllerAs: 'vmWidgets'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/widgets/widgets.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmWidgets'
+                }
+            }
         });
     }
 

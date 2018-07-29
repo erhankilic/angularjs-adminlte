@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('examplesProfile', {
+        $stateProvider.state('app.examplesProfile', {
             url: '/examples/profile',
-            templateUrl: 'app/pages/examples/profile/profile.html',
-            controller: ControllerFn,
-            controllerAs: 'vmProfile'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/examples/profile/profile.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmProfile'
+                }
+            }
         });
     }
 

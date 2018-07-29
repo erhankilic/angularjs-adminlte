@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('examplesBlank', {
+        $stateProvider.state('app.examplesBlank', {
             url: '/examples/blank',
-            templateUrl: 'app/pages/examples/blank/blank.html',
-            controller: ControllerFn,
-            controllerAs: 'vmBlank'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/examples/blank/blank.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmBlank'
+                }
+            }
         });
     }
 

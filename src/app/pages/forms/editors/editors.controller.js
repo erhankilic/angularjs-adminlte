@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('formsEditors', {
+        $stateProvider.state('app.formsEditors', {
             url: '/forms/editors',
-            templateUrl: 'app/pages/forms/editors/editors.html',
-            controller: ControllerFn,
-            controllerAs: 'vmEditors'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/forms/editors/editors.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmEditors'
+                }
+            }
         });
     }
 

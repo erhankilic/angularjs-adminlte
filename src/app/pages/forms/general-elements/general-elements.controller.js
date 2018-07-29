@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('formsGeneralElements', {
+        $stateProvider.state('app.formsGeneralElements', {
             url: '/forms/general-elements',
-            templateUrl: 'app/pages/forms/general-elements/general-elements.html',
-            controller: ControllerFn,
-            controllerAs: 'vmGeneralElements'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/forms/general-elements/general-elements.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmGeneralElements'
+                }
+            }
         });
     }
 

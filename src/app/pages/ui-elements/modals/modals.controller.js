@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('elementsModals', {
+        $stateProvider.state('app.elementsModals', {
             url: '/ui-elements/modals',
-            templateUrl: 'app/pages/ui-elements/modals/modals.html',
-            controller: ControllerFn,
-            controllerAs: 'vmModals'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/ui-elements/modals/modals.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmModals'
+                }
+            }
         });
     }
 

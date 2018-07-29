@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('examples500', {
+        $stateProvider.state('app.examples500', {
             url: '/examples/500',
-            templateUrl: 'app/pages/examples/500/500.html',
-            controller: ControllerFn,
-            controllerAs: 'vm500'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/examples/500/500.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vm500'
+                }
+            }
         });
     }
 

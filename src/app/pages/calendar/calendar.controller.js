@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('calendar', {
+        $stateProvider.state('app.calendar', {
             url: '/calendar',
-            templateUrl: 'app/pages/calendar/calendar.html',
-            controller: ControllerFn,
-            controllerAs: 'vmCalendar'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/calendar/calendar.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmCalendar'
+                }
+            }
         });
     }
 

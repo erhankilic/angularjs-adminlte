@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('formsAdvancedElements', {
+        $stateProvider.state('app.formsAdvancedElements', {
             url: '/forms/advanced-elements',
-            templateUrl: 'app/pages/forms/advanced-elements/advanced-elements.html',
-            controller: ControllerFn,
-            controllerAs: 'vmAdvancedElements'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/forms/advanced-elements/advanced-elements.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmAdvancedElements'
+                }
+            }
         });
     }
 

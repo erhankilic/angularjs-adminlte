@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('elementsTimeline', {
+        $stateProvider.state('app.elementsTimeline', {
             url: '/ui-elements/timeline',
-            templateUrl: 'app/pages/ui-elements/timeline/timeline.html',
-            controller: ControllerFn,
-            controllerAs: 'vmTimeline'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/ui-elements/timeline/timeline.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmTimeline'
+                }
+            }
         });
     }
 

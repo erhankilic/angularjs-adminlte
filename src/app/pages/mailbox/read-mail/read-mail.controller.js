@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('mailboxReadMail', {
+        $stateProvider.state('app.mailboxReadMail', {
             url: '/mailbox/read-mail',
-            templateUrl: 'app/pages/mailbox/read-mail/read-mail.html',
-            controller: ControllerFn,
-            controllerAs: 'vmReadMail'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/mailbox/read-mail/read-mail.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmReadMail'
+                }
+            }
         });
     }
 

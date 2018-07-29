@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('flot', {
+        $stateProvider.state('app.flot', {
             url: '/charts/flot',
-            templateUrl: 'app/pages/charts/flot/flot.html',
-            controller: ControllerFn,
-            controllerAs: 'vmFlot'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/charts/flot/flot.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmFlot'
+                }
+            }
         });
     }
 

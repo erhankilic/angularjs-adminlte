@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('tablesData', {
+        $stateProvider.state('app.tablesData', {
             url: '/tables/data',
-            templateUrl: 'app/pages/tables/data/data.html',
-            controller: ControllerFn,
-            controllerAs: 'vmData'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/tables/data/data.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmData'
+                }
+            }
         });
     }
 

@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('morris', {
+        $stateProvider.state('app.morris', {
             url: '/charts/morris',
-            templateUrl: 'app/pages/charts/morris/morris.html',
-            controller: ControllerFn,
-            controllerAs: 'vmMorris'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/charts/morris/morris.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmMorris'
+                }
+            }
         });
     }
 

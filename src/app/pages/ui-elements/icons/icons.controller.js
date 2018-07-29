@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('elementsIcons', {
+        $stateProvider.state('app.elementsIcons', {
             url: '/ui-elements/icons',
-            templateUrl: 'app/pages/ui-elements/icons/icons.html',
-            controller: ControllerFn,
-            controllerAs: 'vmIcons'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/ui-elements/icons/icons.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmIcons'
+                }
+            }
         });
     }
 

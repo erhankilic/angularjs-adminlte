@@ -15,11 +15,15 @@
      * @param $stateProvider
      */
     function configFn($stateProvider) {
-        $stateProvider.state('inline', {
+        $stateProvider.state('app.inline', {
             url: '/charts/inline',
-            templateUrl: 'app/pages/charts/inline/inline.html',
-            controller: ControllerFn,
-            controllerAs: 'vmInline'
+            views: {
+                'content@app': {
+                    templateUrl: 'app/pages/charts/inline/inline.html',
+                    controller: ControllerFn,
+                    controllerAs: 'vmInline'
+                }
+            }
         });
     }
 
