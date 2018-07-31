@@ -23,11 +23,26 @@
     }
 
     /**
+     * @ngInject
+     * @type {string[]}
+     */
+    ControllerFn.$inject = ["UserService"];
+
+    /**
      * Controller Function
      *
+     * @param UserService
      * @constructor
      */
-    function ControllerFn() {
+    function ControllerFn(UserService) {
         var vm = this;
+
+        vm.user = UserService.getUser();
+
+        vm.logout = logoutFn;
+
+        function logoutFn() {
+            UserService.logout();
+        }
     }
 })();

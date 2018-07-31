@@ -28,13 +28,30 @@
         });
     }
 
+    ControllerFn.$inject = ["UserService", "$location"];
+
     /**
      * Controller Function
      *
+     * @param UserService
+     * @param $location
      * @constructor
      */
-    function ControllerFn() {
+    function ControllerFn(UserService, $location) {
         var vm = this;
+
+        vm.userData = {
+            name: "Alexander Pierce",
+            image: "/images/user2-160x160.jpg",
+            registerDate: "2012",
+            job: "Web Developer"
+        };
+
+        vm.login = loginFn;
+
+        if (UserService.isLogined()) {
+            $location.path("/");
+        }
 
         $(document).ready(function () {
             $('input').iCheck({
@@ -43,5 +60,9 @@
                 increaseArea: '20%' /* optional */
             });
         });
+
+        function loginFn() {
+            UserService.login(vm.userData);
+        }
     }
 })();

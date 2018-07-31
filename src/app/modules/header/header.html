@@ -215,17 +215,17 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="images/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Alexander Pierce</span>
+                        <img ng-src="{{vmHeader.user.image}}" class="user-image" alt="{{vmHeader.user.name}}">
+                        <span class="hidden-xs">{{vmHeader.user.name}}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="images/user2-160x160.jpg" class="img-circle" alt="User Image">
+                            <img ng-src="{{vmHeader.user.image}}" class="img-circle" alt="{{vmHeader.user.name}}">
 
                             <p>
-                                Alexander Pierce - Web Developer
-                                <small>Member since Nov. 2012</small>
+                                {{vmHeader.user.name}} - {{vmHeader.user.job}}
+                                <small>Member since Nov. {{vmHeader.user.registerDate}}</small>
                             </p>
                         </li>
                         <!-- Menu Body -->
@@ -249,7 +249,7 @@
                                 <a href="#" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                <a ng-click="vmHeader.logout()" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
                     </ul>
