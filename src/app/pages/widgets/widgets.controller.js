@@ -62,5 +62,41 @@
             number: "93,139",
             background: "bg-red"
         };
+
+        vm.infoBox5 = {
+            icon: "fa-bookmark-o",
+            title: "Bookmarks",
+            number: "41,410",
+            mainBackground: "bg-aqua",
+            process: 70,
+            description: "70% Increase in 30 Days"
+        };
+
+        vm.infoBox6 = {
+            icon: "fa-thumbs-o-up",
+            title: "Likes",
+            number: "41,410",
+            mainBackground: "bg-green",
+            process: 60,
+            description: "60% Increase in 30 Days"
+        };
+
+        vm.infoBox7 = {
+            icon: "fa-calendar",
+            title: "Events",
+            number: "41,410",
+            mainBackground: "bg-yellow",
+            process: 35,
+            description: "35% Increase in 30 Days"
+        };
+
+        vm.infoBox8 = {
+            icon: "fa-comments-o",
+            title: "Comments",
+            number: "41,410",
+            mainBackground: "bg-red",
+            process: 99,
+            description: "99% Increase in 30 Days"
+        };
     }
 })();
