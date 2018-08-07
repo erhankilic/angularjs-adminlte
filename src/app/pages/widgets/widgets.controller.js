@@ -35,7 +35,32 @@
     function ControllerFn() {
         var vm = this;
 
-        $(document).ready(function () {
-        });
+        vm.infoBox1 = {
+            icon: "fa-envelope-o",
+            title: "Messages",
+            number: "1,410",
+            background: "bg-aqua"
+        };
+
+        vm.infoBox2 = {
+            icon: "fa-flag-o",
+            title: "Bookmarks",
+            number: "410",
+            background: "bg-green"
+        };
+
+        vm.infoBox3 = {
+            icon: "fa-files-o",
+            title: "Uploads",
+            number: "13,648",
+            background: "bg-yellow"
+        };
+
+        vm.infoBox4 = {
+            icon: "fa-star-o",
+            title: "Likes",
+            number: "93,139",
+            background: "bg-red"
+        };
     }
 })();
