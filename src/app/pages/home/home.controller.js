@@ -35,6 +35,35 @@
     function ControllerFn() {
         var vm = this;
 
+        vm.smallBox1 = {
+            background: "bg-aqua",
+            title: "50",
+            smallTitle: "New Orders",
+            url: "#"
+        };
+
+        vm.smallBox2 = {
+            background: "bg-green",
+            title: "53%",
+            smallTitle: "Bounce Rate",
+            url: "#"
+        };
+
+        vm.smallBox3 = {
+            background: "bg-yellow",
+            title: "44",
+            smallTitle: "User Registrations",
+            url: "#"
+        };
+
+        vm.smallBox4 = {
+            background: "bg-red",
+            title: "65",
+            smallTitle: "Unique Visitors",
+            url: "#"
+        };
+
+
         $(document).ready(function () {
             // Make the dashboard widgets sortable Using jquery UI
             $('.connectedSortable').sortable({
