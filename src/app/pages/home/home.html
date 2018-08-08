@@ -40,14 +40,18 @@
             <div class="nav-tabs-custom">
                 <!-- Tabs within a box -->
                 <ul class="nav nav-tabs pull-right">
-                    <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                    <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
+                    <li ng-class="{'active' : vmHome.activeChartTab == 1}"><a ng-click="vmHome.activeChartTab = 1;vmHome.redraw = true;" data-toggle="tab">Area</a></li>
+                    <li ng-class="{'active' : vmHome.activeChartTab == 2}"><a ng-click="vmHome.activeChartTab = 2;vmHome.redraw = true;" data-toggle="tab">Donut</a></li>
                     <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
                 </ul>
                 <div class="tab-content no-padding">
                     <!-- Morris chart - Sales -->
-                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                    <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
+                    <div class="chart tab-pane" ng-class="{'active' : vmHome.activeChartTab == 1}" style="height: 300px;">
+                        <morris-chart id="revenue-chart" data="vmHome.chart1" redraw="{{vmHome.activeChartTab == 1}}"></morris-chart>
+                    </div>
+                    <div class="chart tab-pane" ng-class="{'active' : vmHome.activeChartTab == 2}" style="height: 300px;">
+                        <morris-chart id="sales-chart" data="vmHome.chart2" type="donut" redraw="{{vmHome.activeChartTab == 2}}"></morris-chart>
+                    </div>
                 </div>
             </div>
             <!-- /.nav-tabs-custom -->
@@ -353,7 +357,9 @@
                     </div>
                 </div>
                 <div class="box-body border-radius-none">
-                    <div class="chart" id="line-chart" style="height: 250px;"></div>
+                    <div class="chart" style="height: 250px;">
+                        <morris-chart id="line-chart" data="vmHome.chart3" type="line" redraw="{{true}}"></morris-chart>
+                    </div>
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer no-border">
