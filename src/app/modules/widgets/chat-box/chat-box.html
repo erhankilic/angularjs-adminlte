@@ -1,0 +1,54 @@
+<!-- Chat box -->
+<div class="box box-success">
+    <div class="box-header">
+        <i class="fa fa-comments-o"></i>
+
+        <h3 class="box-title">Chat</h3>
+
+        <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
+            <div class="btn-group" data-toggle="btn-toggle">
+                <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="box-body chat" id="{{bodyId}}">
+
+        <div class="item" ng-repeat="item in vmChat.data.chat">
+            <img ng-src="{{vmChat.data[item.user].image}}" alt="user image" class="online">
+
+            <p class="message">
+                <a href="#" class="name">
+                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> {{item.time}}</small>
+                    {{vmChat.data[item.user].name}}
+                </a>
+                {{item.message}}
+            </p>
+
+            <div class="attachment" ng-if="item.attachment">
+                <h4>Attachments:</h4>
+
+                <p class="filename">{{item.attachment}}</p>
+
+                <div class="pull-right">
+                    <button type="button" class="btn btn-primary btn-sm btn-flat">Open</button>
+                </div>
+            </div>
+            <!-- /.attachment -->
+        </div>
+    </div>
+    <!-- /.chat -->
+    <div class="box-footer">
+        <form ng-submit="vmChat.send()">
+            <div class="input-group">
+                <input class="form-control" ng-model="vmChat.message" placeholder="Type message...">
+
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- /.box (chat box) -->

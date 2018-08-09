@@ -15,10 +15,10 @@
 
 ### Todos
 
-- **Ckeditor gives error.**
-- **There is an error after login process**
-- **Lockscreen** (ongoing)
-- **Widgets**
+- ~~Ckeditor gives error.~~
+- ~~There is an error after login process~~
+- **Lockscreen**
+- **Widgets** (ongoing)
 - **Pages Functionality**
 - **Theme settings on control sidebar**
 - **Implementing AngularUI Calendar**

@@ -130,6 +130,35 @@
             gridTextSize: 10
         };
 
+        vm.chatBoxData = {
+            user1: {
+                image: "images/user2-160x160.jpg",
+                name: "Alexander Pierce"
+            },
+            user2: {
+                image: "images/user4-128x128.jpg",
+                name: "Mike Doe"
+            },
+            chat: [
+                {
+                    user: "user1",
+                    time: "2:15",
+                    message: "I would like to meet you to discuss the latest news about\n" +
+                        "the arrival of the new theme. They say it is going to be one the\n" +
+                        "best themes on the market",
+                    attachment: "Theme-thumbnail-image.jpg"
+                },
+                {
+                    user: "user2",
+                    time: "5:15",
+                    message: "I would like to meet you to discuss the latest news about\n" +
+                        "the arrival of the new theme. They say it is going to be one the\n" +
+                        "best themes on the market",
+                    attachment: null
+                }
+            ]
+        };
+
 
         $(document).ready(function () {
             // Make the dashboard widgets sortable Using jquery UI
@@ -241,13 +270,6 @@
 
             // The Calender
             $('#calendar').datepicker();
-
-            // SLIMSCROLL FOR CHAT WIDGET
-            window.setTimeout(function () {
-                $('#chat-box').slimScroll({
-                    height: '250px'
-                });
-            }, 250);
 
             /* The todo list plugin */
             $('.todo-list').todoList({
