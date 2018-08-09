@@ -1,5 +1,5 @@
 <!-- Chat box -->
-<div class="box box-success">
+<div class="box" ng-class="vmChat.color">
     <div class="box-header">
         <i class="fa fa-comments-o"></i>
 
@@ -45,7 +45,8 @@
                 <input class="form-control" ng-model="vmChat.message" placeholder="Type message...">
 
                 <div class="input-group-btn">
-                    <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                    <button type="submit" class="btn btn-success" ng-disabled="vmChat.message === ''">
+                        <i class="fa fa-plus"></i></button>
                 </div>
             </div>
         </form>

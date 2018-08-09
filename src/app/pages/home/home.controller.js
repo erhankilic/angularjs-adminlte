@@ -159,6 +159,40 @@
             ]
         };
 
+        var date = new Date();
+        vm.todoList = [
+            {
+                name: "Design a nice theme",
+                time: date,
+                is_completed: false
+            },
+            {
+                name: "Make the theme responsive",
+                time: new Date(new Date().setDate(date.getDate() + 1)),
+                is_completed: true
+            },
+            {
+                name: "Let theme shine like a star",
+                time: new Date(new Date().setDate(date.getDate() + 2)),
+                is_completed: false
+            },
+            {
+                name: "Let theme shine like a star",
+                time: new Date(new Date().setDate(date.getDate() + 3)),
+                is_completed: false
+            },
+            {
+                name: "Check your messages and notifications",
+                time: new Date(new Date().setDate(date.getDate() + 4)),
+                is_completed: true
+            },
+            {
+                name: "Let theme shine like a star",
+                time: new Date(new Date().setDate(date.getDate() + 5)),
+                is_completed: false
+            }
+        ];
+
 
         $(document).ready(function () {
             // Make the dashboard widgets sortable Using jquery UI
@@ -170,14 +204,6 @@
                 zIndex: 999999
             });
             $('.connectedSortable .box-header, .connectedSortable .nav-tabs-custom').css('cursor', 'move');
-
-            // jQuery UI sortable for the todo list
-            $('.todo-list').sortable({
-                placeholder: 'sort-highlight',
-                handle: '.handle',
-                forcePlaceholderSize: true,
-                zIndex: 999999
-            });
 
             // bootstrap WYSIHTML5 - text editor
             $('.textarea').wysihtml5();
@@ -270,16 +296,6 @@
 
             // The Calender
             $('#calendar').datepicker();
-
-            /* The todo list plugin */
-            $('.todo-list').todoList({
-                onCheck: function () {
-                    window.console.log($(this), 'The element has been checked');
-                },
-                onUnCheck: function () {
-                    window.console.log($(this), 'The element has been unchecked');
-                }
-            });
         });
     }
 })();

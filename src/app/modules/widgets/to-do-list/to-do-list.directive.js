@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('adminlte').directive('chatBox', DirectiveFn);
+    angular.module('adminlte').directive('toDoList', DirectiveFn);
 
     /**
      * Directive
@@ -20,8 +20,8 @@
             bindToController: true,
             link: linkFn,
             controller: ControllerFn,
-            controllerAs: "vmChat",
-            templateUrl: "app/modules/widgets/chat-box/chat-box.html"
+            controllerAs: "vmTodo",
+            templateUrl: "app/modules/widgets/to-do-list/to-do-list.html"
         };
 
     }
@@ -34,11 +34,11 @@
      */
     function linkFn(scope, elem, attr) {
         scope.bodyId = attr.id + "-body";
-        // SLIMSCROLL FOR CHAT WIDGET
+        // SLIMSCROLL FOR TO DO LIST WIDGET
         window.setTimeout(function () {
             $('#' + scope.bodyId).slimScroll({
                 height: '250px',
-                start: "bottom"
+                start: "top"
             });
         }, 250);
     }
@@ -51,22 +51,35 @@
     function ControllerFn() {
         var vm = this;
 
-        vm.message = "";
+        vm.newTodo = "";
+        vm.search = "";
 
-        vm.send = sendFn;
+        vm.add = addFn;
+        vm.delete = deleteFn;
 
         /**
-         * Sends new message
+         * Adds to do item to list
          */
-        function sendFn() {
-            if (vm.message !== "") {
-                vm.data.chat.push({
-                    user: "user1",
-                    time: "8:15",
-                    message: vm.message,
-                    attachment: null
+        function addFn() {
+            if (vm.newTodo !== "") {
+                vm.data.unshift({
+                    name: vm.newTodo,
+                    time: new Date(),
+                    is_completed: false
                 });
-                vm.message = "";
+                vm.newTodo = "";
+            }
+        }
+
+        /**
+         * Deletes to do item from list
+         * @param index
+         */
+        function deleteFn(index) {
+            var result = confirm("Are you sure want to delete?");
+
+            if (result) {
+                vm.data.splice(index, 1);
             }
         }
     }

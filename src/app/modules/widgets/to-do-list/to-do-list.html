@@ -1,0 +1,50 @@
+<!-- TO DO List -->
+<div class="box" ng-class="vmTodo.color">
+    <div class="box-header">
+        <i class="ion ion-clipboard"></i>
+
+        <h3 class="box-title">To Do List</h3>
+
+        <div class="box-tools pull-right">
+            <input class="form-control" type="text" ng-model="vmTodo.search" placeholder="Search...">
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
+        <ul class="todo-list" id="{{bodyId}}">
+            <li ng-class="{'done': todo.is_completed}" ng-repeat="todo in vmTodo.data | filter: {name: vmTodo.search}">
+                <!-- drag handle -->
+                <span class="handle">
+                    <i class="fa fa-ellipsis-v"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                </span>
+                <!-- checkbox -->
+                <input type="checkbox" name="is_completed" ng-model="todo.is_completed">
+                <!-- to do text -->
+                <span class="text">{{todo.name}}</span>
+                <!-- Emphasis label -->
+                <small class="label label-danger"><i class="fa fa-clock-o"></i> {{todo.time.toString()}}</small>
+                <!-- General tools such as edit or delete-->
+                <div class="tools">
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash-o" ng-click="vmTodo.delete($index)"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer clearfix no-border">
+        <form ng-submit="vmTodo.add()">
+            <div class="input-group">
+                <input class="form-control" ng-model="vmTodo.newTodo" placeholder="To Do Name...">
+
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-success" ng-disabled="vmTodo.newTodo === ''">
+                        <i class="fa fa-plus"></i> Add item</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- /.box -->
