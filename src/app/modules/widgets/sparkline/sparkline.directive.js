@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('adminlte').directive('vectorMap', DirectiveFn);
+    angular.module('adminlte').directive('sparkline', DirectiveFn);
 
     /**
      * Directive
@@ -12,9 +12,10 @@
     function DirectiveFn() {
 
         return {
-            restrict: "E",
+            restrict: "EA",
             scope: {
-                data: "="
+                data: "=",
+                options: "="
             },
             link: linkFn
         };
@@ -22,7 +23,6 @@
     }
 
     function linkFn($scope, $element, $attrs)  {
-        // World map by jvectormap
-        $('#' + $attrs.id).vectorMap($scope.data);
+        $('#' + $attrs.id).sparkline($scope.data, $scope.options);
     }
 })();

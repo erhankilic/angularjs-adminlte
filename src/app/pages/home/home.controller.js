@@ -236,6 +236,18 @@
 
         vm.date = "";
 
+        // sparkline datas
+        vm.sparklineData1 = [1000, 1200, 920, 927, 931, 1027, 819, 930, 1021];
+        vm.sparklineData2 = [515, 519, 520, 522, 652, 810, 370, 627, 319, 630, 921];
+        vm.sparklineData3 = [15, 19, 20, 22, 33, 27, 31, 27, 19, 30, 21];
+        vm.sparklineOptions = {
+            type: 'line',
+            lineColor: '#92c1dc',
+            fillColor: '#ebf4f9',
+            height: '50',
+            width: '80'
+        };
+
 
         $(document).ready(function () {
             // Make the dashboard widgets sortable Using jquery UI
@@ -253,32 +265,6 @@
 
             /* jQueryKnob */
             $('.knob').knob();
-
-            // Sparkline charts
-            var myvalues = [1000, 1200, 920, 927, 931, 1027, 819, 930, 1021];
-            $('#sparkline-1').sparkline(myvalues, {
-                type: 'line',
-                lineColor: '#92c1dc',
-                fillColor: '#ebf4f9',
-                height: '50',
-                width: '80'
-            });
-            myvalues = [515, 519, 520, 522, 652, 810, 370, 627, 319, 630, 921];
-            $('#sparkline-2').sparkline(myvalues, {
-                type: 'line',
-                lineColor: '#92c1dc',
-                fillColor: '#ebf4f9',
-                height: '50',
-                width: '80'
-            });
-            myvalues = [15, 19, 20, 22, 33, 27, 31, 27, 19, 30, 21];
-            $('#sparkline-3').sparkline(myvalues, {
-                type: 'line',
-                lineColor: '#92c1dc',
-                fillColor: '#ebf4f9',
-                height: '50',
-                width: '80'
-            });
 
             // The Calender
             $('#calendar').datepicker();

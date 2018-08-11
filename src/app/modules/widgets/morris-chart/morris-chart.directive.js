@@ -11,7 +11,7 @@
     function DirectiveFn() {
 
         return {
-            restrict: "EA",
+            restrict: "E",
             scope: {
                 type: "@",
                 redraw: "@",
