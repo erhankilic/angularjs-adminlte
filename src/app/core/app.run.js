@@ -17,10 +17,6 @@
      * @constructor
      */
     function RunFn(UserService, $location) {
-        $(document).ready(function () {
-            $.widget.bridge('uibutton', $.ui.button);
-        });
-
         if (!UserService.isLogined()) {
             $location.path("/login");
         }

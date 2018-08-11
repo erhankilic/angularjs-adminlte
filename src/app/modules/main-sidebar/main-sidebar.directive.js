@@ -22,12 +22,21 @@
 
     }
 
+    ControllerFn.$inject = ["UserService"];
+
     /**
-     * Controller Function
+     * Controller
      *
+     * @param UserService
      * @constructor
      */
-    function ControllerFn() {
+    function ControllerFn(UserService) {
         var vm = this;
+
+        vm.user = UserService.getUser();
+
+        window.setTimeout(function () {
+            $('.sidebar-menu').tree();
+        }, 250);
     }
 })();
