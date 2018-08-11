@@ -248,6 +248,16 @@
             width: '80'
         };
 
+        vm.knob1 = 20;
+        vm.knob2 = 45;
+        vm.knob3 = 70;
+        vm.knobOptions = {
+            width: 60,
+            height: 60,
+            fgColor: "#39CCCC",
+            readOnly: true
+        };
+
 
         $(document).ready(function () {
             // Make the dashboard widgets sortable Using jquery UI
@@ -264,7 +274,11 @@
             $('.textarea').wysihtml5();
 
             /* jQueryKnob */
-            $('.knob').knob();
+            $('.knob').knob({
+                width: 60,
+                height: 60,
+                fgColor: "#39CCCC"
+            });
 
             // The Calender
             $('#calendar').datepicker();
