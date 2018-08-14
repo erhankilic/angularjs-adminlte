@@ -39,6 +39,7 @@
             background: "bg-aqua",
             title: "50",
             smallTitle: "New Orders",
+            icon: "ion ion-bag",
             url: "#"
         };
 
@@ -46,6 +47,7 @@
             background: "bg-green",
             title: "53%",
             smallTitle: "Bounce Rate",
+            icon: "ion ion-stats-bars",
             url: "#"
         };
 
@@ -53,6 +55,7 @@
             background: "bg-yellow",
             title: "44",
             smallTitle: "User Registrations",
+            icon: "ion ion-person-add",
             url: "#"
         };
 
@@ -60,6 +63,7 @@
             background: "bg-red",
             title: "65",
             smallTitle: "Unique Visitors",
+            icon: "ion ion-pie-graph",
             url: "#"
         };
 

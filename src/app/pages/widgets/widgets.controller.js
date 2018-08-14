@@ -98,5 +98,37 @@
             process: 99,
             description: "99% Increase in 30 Days"
         };
+
+        vm.smallBox1 = {
+            background: "bg-aqua",
+            title: "150",
+            smallTitle: "New Orders",
+            icon: "ion ion-bag",
+            url: "#"
+        };
+
+        vm.smallBox2 = {
+            background: "bg-green",
+            title: "53%",
+            smallTitle: "Bounce Rate",
+            icon: "ion ion-stats-bars",
+            url: "#"
+        };
+
+        vm.smallBox3 = {
+            background: "bg-yellow",
+            title: "44",
+            smallTitle: "User Registrations",
+            icon: "ion ion-person-add",
+            url: "#"
+        };
+
+        vm.smallBox4 = {
+            background: "bg-red",
+            title: "65",
+            smallTitle: "Unique Visitors",
+            icon: "ion ion-pie-graph",
+            url: "#"
+        };
     }
 })();
