@@ -35,6 +35,34 @@
     function ControllerFn() {
         var vm = this;
 
+        vm.infoBox1 = {
+            icon: "fa fa-gear",
+            title: "CPU Traffic",
+            number: "90%",
+            background: "bg-aqua"
+        };
+
+        vm.infoBox2 = {
+            icon: "fa fa-google-plus",
+            title: "Likes",
+            number: "41,410",
+            background: "bg-red"
+        };
+
+        vm.infoBox3 = {
+            icon: "ion ion-ios-cart-outline",
+            title: "Sales",
+            number: "760",
+            background: "bg-green"
+        };
+
+        vm.infoBox4 = {
+            icon: "ion ion-ios-people-outline",
+            title: "New Members",
+            number: "2,000",
+            background: "bg-yellow"
+        };
+
         $(document).ready(function () {
             'use strict';
 
