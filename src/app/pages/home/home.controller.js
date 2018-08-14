@@ -258,6 +258,8 @@
             readOnly: true
         };
 
+        vm.textData = "";
+
 
         $(document).ready(function () {
             // Make the dashboard widgets sortable Using jquery UI
@@ -269,16 +271,6 @@
                 zIndex: 999999
             });
             $('.connectedSortable .box-header, .connectedSortable .nav-tabs-custom').css('cursor', 'move');
-
-            // bootstrap WYSIHTML5 - text editor
-            $('.textarea').wysihtml5();
-
-            /* jQueryKnob */
-            $('.knob').knob({
-                width: 60,
-                height: 60,
-                fgColor: "#39CCCC"
-            });
 
             // The Calender
             $('#calendar').datepicker();
