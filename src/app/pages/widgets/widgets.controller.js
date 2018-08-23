@@ -130,5 +130,12 @@
             icon: "ion ion-pie-graph",
             url: "#"
         };
+
+        vm.collapse1 = true;
+        vm.collapse2 = false;
+        vm.collapse3 = true;
+        vm.collapse4 = false;
+        vm.remove = false;
+        vm.remove2 = false;
     }
 })();

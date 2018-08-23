@@ -82,13 +82,13 @@
 
     <div class="row">
         <div class="col-md-3">
-            <div class="box box-default collapsed-box">
+            <div class="box box-default" ng-class="{'collapsed-box': vmWidgets.collapse1}">
                 <div class="box-header with-border">
                     <h3 class="box-title">Expandable</h3>
 
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                        </button>
+                        <button type="button" class="btn btn-box-tool" ng-click="vmWidgets.collapse1 = !vmWidgets.collapse1">
+                            <i class="fa fa-plus"></i></button>
                     </div>
                     <!-- /.box-tools -->
                 </div>
@@ -102,12 +102,13 @@
         </div>
         <!-- /.col -->
         <div class="col-md-3">
-            <div class="box box-success">
+            <div class="box box-success" ng-if="!vmWidgets.remove">
                 <div class="box-header with-border">
                     <h3 class="box-title">Removable</h3>
 
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        <button type="button" class="btn btn-box-tool" ng-click="vmWidgets.remove = true">
+                            <i class="fa fa-times"></i></button>
                     </div>
                     <!-- /.box-tools -->
                 </div>
@@ -121,13 +122,13 @@
         </div>
         <!-- /.col -->
         <div class="col-md-3">
-            <div class="box box-warning">
+            <div class="box box-warning" ng-class="{'collapsed-box': vmWidgets.collapse2}">
                 <div class="box-header with-border">
                     <h3 class="box-title">Collapsable</h3>
 
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                        </button>
+                        <button type="button" class="btn btn-box-tool" ng-click="vmWidgets.collapse2 = !vmWidgets.collapse2">
+                            <i class="fa fa-minus"></i></button>
                     </div>
                     <!-- /.box-tools -->
                 </div>
@@ -165,13 +166,13 @@
 
     <div class="row">
         <div class="col-md-3">
-            <div class="box box-default collapsed-box box-solid">
+            <div class="box box-default box-solid" ng-class="{'collapsed-box': vmWidgets.collapse3}">
                 <div class="box-header with-border">
                     <h3 class="box-title">Expandable</h3>
 
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                        </button>
+                        <button type="button" class="btn btn-box-tool" ng-click="vmWidgets.collapse3 = !vmWidgets.collapse3">
+                            <i class="fa fa-plus"></i></button>
                     </div>
                     <!-- /.box-tools -->
                 </div>
@@ -185,12 +186,13 @@
         </div>
         <!-- /.col -->
         <div class="col-md-3">
-            <div class="box box-success box-solid">
+            <div class="box box-success box-solid" ng-if="!vmWidgets.remove2">
                 <div class="box-header with-border">
                     <h3 class="box-title">Removable</h3>
 
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        <button type="button" class="btn btn-box-tool" ng-click="vmWidgets.remove2 = true">
+                            <i class="fa fa-times"></i></button>
                     </div>
                     <!-- /.box-tools -->
                 </div>
@@ -204,13 +206,13 @@
         </div>
         <!-- /.col -->
         <div class="col-md-3">
-            <div class="box box-warning box-solid">
+            <div class="box box-warning box-solid" ng-class="{'collapsed-box': vmWidgets.collapse4}">
                 <div class="box-header with-border">
                     <h3 class="box-title">Collapsable</h3>
 
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                        </button>
+                        <button type="button" class="btn btn-box-tool" ng-click="vmWidgets.collapse4 = !vmWidgets.collapse4">
+                            <i class="fa fa-minus"></i></button>
                     </div>
                     <!-- /.box-tools -->
                 </div>
